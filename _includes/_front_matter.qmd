@@ -1,5 +1,5 @@
 ---
-title: Parabel Parametrisierung
+title: Scheitelpunktform Normalparabel
 subtitle: Einseiter
 date: 2100-10-10 
 author: \| <small>Călin Aurel Drăgan</small>

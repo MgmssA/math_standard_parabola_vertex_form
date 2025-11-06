@@ -77,15 +77,24 @@ tex.block`S(${parameterA}|${parameterB}).`
 
 ::: {.card .flow title="Parameter"}
 
+Verschiebung parallel zur x Achse
+
 ```{ojs}
 
 viewof parameterA = Inputs.range(
     [-5, 5], 
-    {value: 0, step: 0.1, label: "Parameter a:", width: "80%"}
+    {value: 0, step: 0.1, label: "Parameter a:", width: "70%"}
 )
+
+```
+
+Verschiebung parallel zur y Achse
+
+```{ojs}
+
 viewof parameterB = Inputs.range(
     [-5, 5], 
-    {value: 0, step: 0.1, label: "Parameter b:", width: "80%"}
+    {value: 0, step: 0.1, label: "Parameter b:", width: "70%"}
 )
 
 ```
