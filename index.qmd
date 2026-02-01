@@ -3,19 +3,7 @@
 {{< include _includes/_katex_macros.qmd >}} 
 {{< include _includes/_r_themes.qmd >}}
 
-## Column {width=40%}
-
-::: {.card .flow title="Allgemeine Scheitelpunktform"}
-
-Die parametrisierte Scheitelpunktform einer Normalparabel ist
-
-$$
-y = (x - a)^2 + b.
-$$
-
-Dabei sind $a$ und $b$ Parameter, die die Position der Parabel bestimmen. Aus dieser Gleichung kannst Du die Koordinaten des Scheitelpunktes direkt als $S(a|b)$ ablesen. Spiel jetzt mit den Parametern und beobachte, was passiert.
-
-:::
+## Column
 
 ```{ojs}
 //| eval: true
@@ -49,13 +37,25 @@ dynamicData = Array.from(rangeX, (x) => {
 
 ```
 
-::: {.card .flow title="Spezifische Scheitelpunktform"}
+::: {.card fill="false" title="Allgemeine Scheitelpunktform"}
+
+Die parametrisierte Scheitelpunktform einer Normalparabel ist
+
+$$
+y = (x - a)^2 + b.
+$$
+
+Dabei sind $a$ und $b$ Parameter, die die Position der Parabel bestimmen. Aus dieser Gleichung kannst Du die Koordinaten des Scheitelpunktes direkt als $S(a|b)$ ablesen. Spiel jetzt mit den Parametern und beobachte, was passiert.
+
+:::
+
+::: {.card fill="false" title="Spezifische Scheitelpunktform"}
 
 Wenn Du  die Werte der Parameter einstellst, ergibt sich für die Scheitelpunktform der Normalparabel: 
 
 ```{ojs}
 //| output: true
-//| flow: true
+//| flow: false
 
 tex.block`y = (x - ${parameterA})^2 + ${parameterB}.`
 
@@ -65,7 +65,7 @@ Hierbei kannst Du den Scheitelpunkt direkt ablesen als
 
 ```{ojs}
 //| output: true
-//| flow: true
+//| flow: false
 
 tex.block`S(${parameterA}|${parameterB}).`
 
@@ -73,9 +73,7 @@ tex.block`S(${parameterA}|${parameterB}).`
 
 :::
 
-## Column
-
-::: {.card .flow title="Parameter"}
+::: {.card fill="true" title="Parameter"}
 
 Verschiebung parallel zur x Achse
 
@@ -101,11 +99,17 @@ viewof parameterB = Inputs.range(
 
 :::
 
+## Column
 
 ```{ojs}
+//| label: plot
 //| title: "Graph"
+//| fill: true
 
 Plot.plot({
+    // width: cards.plot.width,
+    height: Math.max(cards.plot.height),
+    // aspectRatio: 1,
     marks: [
         Plot.ruleX([0], {stroke: "#666666"}),
         Plot.ruleY([0], {stroke: "#666666"}),

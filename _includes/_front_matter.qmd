@@ -10,7 +10,7 @@ format:
         # shift-heading-level-by: 1
         orientation: columns
         scrolling: false
-        expandable: true
+        expandable: false
         number-sections: true
         number-depth: 1
         number-offset: 0
